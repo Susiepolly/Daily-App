@@ -22,8 +22,8 @@ class Fact extends React.Component {
     let dailyFact = this.state.fact.text;
 
     return(
-    <div className='bg-light-gray br3 pa3 ma2 grow bw2 shadow-5 tc'>
-        <p>{dailyFact}</p>
+    <div className='pa3 br3 f3 tr w-50' >
+        <p className='o-100'>{dailyFact}</p>
     </div>
     );
   }
