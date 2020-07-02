@@ -26,7 +26,7 @@ class App extends React.Component {
     return(
     <Background weather={weather}>
       <Time />
-      <div className='flex justify-around items-center'>
+      <div className='weatherAndFact'>
         <Weather temp={temp} weather={weather}/>
         <Fact />
       </div>

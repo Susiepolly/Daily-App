@@ -1,3 +1,19 @@
 * {
-  font-family: 'Emblema One', cursive;
+  font-family: 'Poller One', cursive;
+}
+
+.weatherAndFact {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media only screen and (max-width: 700px) {
+  .weatherAndFact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-around;
+  }
 }

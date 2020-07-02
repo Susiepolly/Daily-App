@@ -61,10 +61,12 @@ const Background = (props) => {
 
   let sectionStyleLight = {
   width: "100%",
-  height: "100vh",
+  minHeight: "100vh",
   backgroundImage: `url(${weatherImg(weatherIcon)})`,
   color: "#000000",
-  textShadow: "1px 1px #ffffff"
+  textShadow: "1px 1px rgb(255, 255, 255, 0.5)",
+  position: 'absolute',
+  top:'0'
   };
 
   let sectionStyleDark = {
@@ -72,7 +74,9 @@ const Background = (props) => {
   height: "100vh",
   backgroundImage: `url(${weatherImg(weatherIcon)})`,
   color: "#ffffff",
-  textShadow: "1px 1px #000000"
+  textShadow: "1px 1px rgb(0, 0, 0, 0.5)",
+  position: 'absolute',
+  top:'0'
   };
 
   function selectStyle(image) {

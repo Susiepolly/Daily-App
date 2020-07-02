@@ -22,7 +22,7 @@ class Fact extends React.Component {
     let dailyFact = this.state.fact.text;
 
     return(
-    <div className='pa3 br3 f3 tr w-50' >
+    <div className='pa3 br3 f3-ns f4 tr w-50-ns' >
         <p className='o-100'>{dailyFact}</p>
     </div>
     );
