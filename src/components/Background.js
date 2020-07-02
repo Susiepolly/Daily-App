@@ -10,6 +10,7 @@ import RainN from '../img/rainN.jpg';
 import Storm from '../img/thunderstorm.jpg';
 import Snow from '../img/snow.jpg';
 import Mist from '../img/mist.jpg';
+import Flowers from '../img/flowers.jpg'
 
 function weatherImg(icon) {
   switch(icon) {
@@ -53,6 +54,8 @@ function weatherImg(icon) {
     case '50n':
       return Mist;
       break;
+    default:
+      return Flowers;
   }
 }
 
@@ -96,6 +99,8 @@ const Background = (props) => {
       case Storm:
         return sectionStyleDark;
         break;
+      default:
+      return sectionStyleLight;
     }
   }
 
