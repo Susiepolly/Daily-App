@@ -20,7 +20,7 @@ const Weather = ({ temp, weather}) => {
     return(
       <div className='bg-lightest-blue dark-gray dib br3 pa3 ma2 grow bw2 shadow-5 tc' style={{ backgroundColor: bgColor(tempCurrent)}}>
         <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`}/>
-        <p className='f1-ns f3'>{tempCurrent}° C</p>
+        <p className='f1-ns f3 ma0'>{tempCurrent}° C</p>
         <p>Feels like {feelsLike}° C</p>
         <p>Forecast: {forecast}</p>
       </div>

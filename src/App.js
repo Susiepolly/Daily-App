@@ -3,12 +3,13 @@ import './App.css';
 import Fact from './components/Fact';
 import Weather from './components/Weather';
 import Background from './components/Background';
-import Time from './components/Time';
+import Clock from './components/Clock';
 
 class App extends React.Component {
   constructor() {
     super()
     this.state = {
+      date: new Date(),
       temp: '',
       weather: {},
     }
@@ -22,10 +23,10 @@ class App extends React.Component {
 
 
   render() {
-    const { temp, weather } = this.state;
+    const { date, temp, weather } = this.state;
     return(
     <Background weather={weather}>
-      <Time />
+      <Clock />
       <div className='weatherAndFact'>
         <Weather temp={temp} weather={weather}/>
         <Fact />
