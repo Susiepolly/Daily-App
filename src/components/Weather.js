@@ -10,7 +10,7 @@ function bgColor(temp) {
   else if (temp > 25) {return '#CC625D'}
 }
 
-const Weather = ({ temp, weather}) => {
+const Weather = ({ city, temp, weather}) => {
 
     let tempCurrent = Math.round(temp.temp);
     let feelsLike = Math.round(temp.feels_like);
@@ -19,7 +19,8 @@ const Weather = ({ temp, weather}) => {
 
     return(
       <div className='bg-lightest-blue dark-gray dib br3 pa3 ma2 grow bw2 shadow-5 tc' style={{ backgroundColor: bgColor(tempCurrent)}}>
-        <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`}/>
+        <p className='pb0 mb0 f3'>{city}</p>
+        <img className='pa0 ma0' alt='weather logo' src={`http://openweathermap.org/img/wn/${icon}@2x.png`}/>
         <p className='f1-ns f3 ma0'>{tempCurrent}° C</p>
         <p>Feels like {feelsLike}° C</p>
         <p>Forecast: {forecast}</p>
