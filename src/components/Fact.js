@@ -93,7 +93,7 @@ class Fact extends React.Component {
 
     return(
     <div className='pa3 br3 f3-ns f4 tr w-50-ns' >
-        <p className='o-100'>On {date}{dateIndicator(date)} of {monthName(month)} in {year} {dailyFact}</p>
+        <p className='o-100'>On {date}{dateIndicator(date)} of {monthName(month)} in {year}: {dailyFact}</p>
     </div>
     );
   }
