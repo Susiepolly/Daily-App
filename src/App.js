@@ -24,7 +24,7 @@ class App extends React.Component {
   componentDidMount = () => {
     this.timerID = setInterval( () => this.sec(), 60000 );
 
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.searchfield}&units=metric&appid=3244bedb98e800f1f9b64d8220471999`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.state.searchfield}&units=metric&appid=3244bedb98e800f1f9b64d8220471999`)
     .then(response => response.json())
     .then(data => this.setState( {temp: data.main, weather: data.weather[0], timezone: data.timezone * 1000 }))
     }

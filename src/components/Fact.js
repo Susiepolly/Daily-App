@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class Fact extends React.Component {
   constructor() {
     super()
@@ -13,12 +14,20 @@ class Fact extends React.Component {
     let month = now.getMonth() + 1;
     let date = now.getDate();
 
-    fetch(`http://numbersapi.com/${month}/${date}/date?json`)
+    fetch(`https://numbersapi.p.rapidapi.com/${month}/${date}/date?fragment=true&json=true`, {
+	      "method": "GET",
+	       "headers": {
+		     "x-rapidapi-host": "numbersapi.p.rapidapi.com",
+		      "x-rapidapi-key": "3aa242d4b6msh83b08bf9bd26c51p1c4f07jsn4da817181b75"
+	       }})
     .then(resp => resp.json())
     .then(text => this.setState( {fact: text }));
   }
 
   render() {
+    let now = new Date(this.props.time);
+    let month = now.getMonth() + 1;
+    let date = now.getDate();
     let dailyFact = this.state.fact.text;
 
     return(
