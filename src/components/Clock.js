@@ -1,35 +1,15 @@
 import React from 'react';
 
-class Clock extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      date: new Date(),
-    }
-  }
-  componentDidMount() {
-    this.timerID = setInterval(
-      () => this.sec(),
-      60000
-    );
-  }
+const Clock = ({ time }) => {
 
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
+    let date = new Date(time);
 
-  sec() {
-    this.setState({date: new Date()});
-    }
-
-    render() {
-    let hours = this.state.date.getHours().toString().padStart(2, '0');
-    let minutes = this.state.date.getMinutes().toString().padStart(2, '0');
+    let hours = date.getUTCHours().toString().padStart(2, '0');
+    let minutes = date.getUTCMinutes().toString().padStart(2, '0');
 
     return(
       <h2 className='tc f1-ns f2 pa0 pa5-ns'>{hours}:{minutes}</h2>
     );
-  }
 }
 
 export default Clock;

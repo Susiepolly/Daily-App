@@ -9,7 +9,7 @@ class Fact extends React.Component {
   }
 
   componentDidMount() {
-    let now = new Date();
+    let now = new Date(this.props.time);
     let month = now.getMonth() + 1;
     let date = now.getDate();
 
