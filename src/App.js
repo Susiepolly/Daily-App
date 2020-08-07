@@ -59,7 +59,7 @@ class App extends React.Component {
     const { date, temp, weather, city, timezone } = this.state;
     const time = +this.state.date + +this.state.timezone;
     return(
-    <Background weather={weather}>
+    <Background weather={weather} className="background">
       <Clock time={time} timezone={timezone}/>
       <div className='weatherAndFact'>
         <Weather city={city} temp={temp} weather={weather}/>
